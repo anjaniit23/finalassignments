@@ -1,0 +1,34 @@
+{
+  "name": "anjanib",
+  "version": "1.0.0",
+  "description": "social network for beginners",
+  "main": "index.js",
+  "scripts": {
+    "my-app-install": "npm install --prefix my-app",
+    "start": "node index.js",
+    "index": "nodemon index.js",
+    "my-app": "npm start --prefix my-app",
+    "dev": "concurrently  \"npm run index\" \"npm run my-app\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix my-app && npm run build --prefix my-app"
+  },
+  "author": "Anjani",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "gravatar": "^1.8.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.4",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12",
+    "remote-redux-devtools": "^0.5.0"
+  }
+}
