@@ -1,12 +1,12 @@
 import axios from 'axios';
 
 import { GET_ERRORS,ADD_POST,GET_POSTS,POST_LOADING ,DELETE_POST} from './types';
-const process=require("process");
+
 
 //add post
 export const addPost=(postData)=>dispatch=>{
     axios
-         .post(`http://localhost:${process.env.PORT}/api/posts`,postData)
+         .post("/api/posts",postData)
          .then(res=>
             dispatch({
                 type:ADD_POST,
@@ -22,7 +22,7 @@ export const addPost=(postData)=>dispatch=>{
 export const getPosts=()=>dispatch=>{
     dispatch(setPostLoading());
     axios
-         .get(`http://localhost:${process.env.PORT}/api/posts`)
+         .get("/api/posts")
          .then(res=>
             dispatch({
                 type:GET_POSTS,
@@ -38,7 +38,7 @@ export const getPosts=()=>dispatch=>{
 export const addLike=(id)=>dispatch=>{
     dispatch(setPostLoading());
     axios
-         .post(`http://localhost:${process.env.PORT}/api/posts/like/${id}`)
+         .post(`/api/posts/like/${id}`)
          .then(res=>
             dispatch(getPosts()))
         .catch(err=>{
@@ -52,7 +52,7 @@ export const addLike=(id)=>dispatch=>{
 export const deletePost=(id)=>dispatch=>{
     dispatch(setPostLoading());
     axios
-         .delete(`http://localhost:${process.env.PORT}/api/posts/${id}`)
+         .delete(`/api/posts/${id}`)
          .then(res=>
             dispatch({
                 type:DELETE_POST,

@@ -31,7 +31,7 @@ class Postform extends Component{
       e.preventDefault();
       console.log(this.props);
       const {user}=this.props.auth;
-     
+      console.log("yeah,inside the onsumbit");
       const newPost={
          text:this.state.text,
          name:user.name,
