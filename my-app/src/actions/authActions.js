@@ -5,7 +5,7 @@ import jwt_decode from 'jwt-decode';
 //Register user
 export const registerUser =(userData,history)=>dispatch=>{
    axios.post(`/api/users/register`, userData)
-    .then(res=>history.push('/SignIn'))
+    .then(res=>{history.push('/SignIn');alert("succesfully registered");})
     .catch(err=>dispatch({
         type:GET_ERRORS,
         payload:err.response.data
@@ -29,6 +29,7 @@ export const loginUser=userData=>dispatch=>{
              const decoded= jwt_decode(token);
              //set current user
              dispatch(setCurrentUser(decoded));
+             alert("succesfully loggedin ");
          })
          .catch(err=>{
 
