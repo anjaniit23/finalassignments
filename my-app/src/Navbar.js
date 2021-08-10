@@ -18,6 +18,7 @@ class Navbar extends Component{
           <li><Link to="/dashboard" ><span className="links">Post-Section!</span></Link></li>
           <li className="linklogout"onClick={this.onLogoutClick.bind(this)}>logout</li>
           <li className="avatar"><div ><img src={user.avatar} alt={user.name} width="100%" height="100%"/></div></li>
+          heyman
          </ul>
 
     );

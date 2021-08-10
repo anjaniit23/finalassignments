@@ -1,14 +1,15 @@
 a {
   text-decoration: none;
 }
+
 .links {
-  color: wheat;
+  color: white;
   font-size: 2.5rem;
   text-decoration: none;
 }
 .linklogout {
   float: right !important;
-  color: wheat;
+  color: white;
   font-size: 2.7rem;
   position: relative;
   left: -2rem;
@@ -16,32 +17,40 @@ a {
 }
 .avatar {
   float: right !important;
+  line-height: 2rem !important;
+  position: relative;
+  left: -1rem;
+  top: 1.3rem;
 }
 .avatar img {
   width: 3rem;
   height: 3rem;
   border-radius: 10rem;
-  position: relative;
-  left: -1rem;
 }
 .navbar {
   height: 6rem;
   display: flexbox;
   justify-content: center;
-  background-color: rgba(22, 12, 151, 0.87);
+  background-color: rgba(7, 7, 7, 0.87);
   width: 100%;
   box-shadow: 0.5px 0.5px 10px white;
 }
 .navbar li {
+  line-height: 5.7rem;
   text-decoration: none;
   text-shadow: 4px 4px 6px rgb(17, 16, 16);
   font-family: Georgia;
-  margin: 1rem 1rem 1rem 1rem;
+  margin: 0rem 1rem 1rem 1rem;
   list-style: none;
   width: fit-content;
   height: fit-content;
   list-style: none;
   float: left;
+  border-radius: 2rem;
+}
+
+.navbar li:hover {
+  background-color: red;
 }
 .headingtext {
   font-size: 3rem;
@@ -79,6 +88,7 @@ a {
   margin: 0;
 }
 .btn {
+  margin-top: 2.5rem;
   width: 10rem;
   height: 3rem;
   border-radius: 2rem;
@@ -89,6 +99,7 @@ a {
 }
 .post {
   color: white;
+  margin-bottom: 2%;
   border-top-left-radius: 4rem;
   border-bottom-right-radius: 4rem;
   width: 30%;
@@ -163,51 +174,18 @@ delete:hover {
     height: 6rem;
     font-family: Palatino Linotype;
   }
+  .posttitle {
+    width: 80%;
+  }
   .post {
-    width: 40%;
-    margin: auto;
-    border: 2px solid rgb(177, 23, 23);
-    box-shadow: 5px -5px 10px rgb(224, 21, 106), 0px -5px 10px rgb(12, 12, 12),
-      0px 10px 10px rgb(12, 12, 12), 20px -10px 10px rgb(12, 12, 12);
-    background-color: wheat;
+    width: 70%;
   }
-  .imgdislike {
-    margin-right: 5%;
-    margin-top: -20%;
-    width: 100px;
-    height: 30px;
-    float: right;
-    text-align: right;
+  .upper,
+  .postcontent {
+    font-size: 1.4rem;
   }
-  .edit,
-  edit:hover {
-    cursor: pointer;
-    margin-top: -7%;
-    margin-left: -20%;
-    width: 30%;
-    height: 88%;
-    font-size: 3rem;
-    color: rgb(29, 218, 129);
-  }
-  .dashboardlink {
-    margin: 2% 2% 2% -20%;
-  }
-  .delete,
-  delete:hover {
-    cursor: pointer;
-    margin: -80% 0 0 40%;
-    width: 30%;
-    height: 88%;
-    font-size: 3rem;
-    color: rgb(235, 13, 13);
-  }
-  a:link,
-  a:visited {
-    color: wheat;
-    font-size: 2rem;
-    text-decoration: none;
-    text-shadow: 4px 4px 6px rgb(17, 16, 16);
-    font-family: Georgia;
-    margin: 1rem 1rem 1rem 0.5rem;
+  .postusername {
+    width: 70%;
+    border: 1px solid red;
   }
 }

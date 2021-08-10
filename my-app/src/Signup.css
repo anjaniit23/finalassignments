@@ -2,7 +2,7 @@
   width: 50%;
   height: 8rem;
   margin: auto;
-  padding-top: 10rem;
+  padding-top: 5rem;
   font-size: 2.5rem;
   color: rgb(8, 8, 8);
 }
@@ -55,7 +55,7 @@
   border-top-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
   width: 50rem;
-  height: 27rem;
+  height: 29rem;
   margin: 0 auto;
   text-align: center;
   background-image: linear-gradient(
@@ -80,14 +80,7 @@
   font-family: Georgia;
   margin-left: 6rem;
 }
-.inputbox {
-  text-align: left;
-  float: right;
-  width: 42%;
-  margin-right: 2.8rem;
-  height: 3rem;
-  border: 2px slid black;
-}
+
 .textsignin {
   float: left;
   margin: auto 0 0.2rem 5rem;
@@ -96,19 +89,38 @@
   font-size: 2rem;
   font-family: Georgia;
 }
-.inputboxsignin {
-  width: 60%;
-  margin-top: 4%;
-  float: left;
-}
-.btnsignin {
-  margin: 10rem auto auto auto;
-}
-.btnsignup {
-  margin: 1rem 2rem 0 0;
-  height: 10%;
-}
+
 .alert {
   width: 100;
   height: 20%;
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 6px;
+  }
+  .warntext {
+    font-size: 1.5rem;
+    width: 30rem;
+  }
+  .signin {
+    width: 30rem;
+    margin-left: -6rem;
+  }
+  .signup input,
+  .signin input {
+    width: 70%;
+    height: 3rem;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+  .signup {
+    width: 30rem;
+    margin-left: -6rem;
+  }
+  .signup li {
+    text-align: center;
+    width: 35rem;
+    list-style: none;
+    margin-bottom: -0.5rem;
+  }
 }
