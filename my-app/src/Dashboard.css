@@ -50,7 +50,8 @@ a {
 }
 
 .navbar li:hover {
-  background-color: red;
+  transform: scale(1.05);
+  transition: 0.4s ease-in-out;
 }
 .headingtext {
   font-size: 3rem;
@@ -89,6 +90,16 @@ a {
 }
 .btn {
   margin-top: 2.5rem;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 2rem;
+  background-color: rgb(46, 49, 46);
+  color: aliceblue;
+  cursor: pointer;
+  border: 2px solid white;
+}
+.signupbtn {
+  margin-top: 4rem;
   width: 10rem;
   height: 3rem;
   border-radius: 2rem;
@@ -186,5 +197,9 @@ delete:hover {
   }
   .postusername {
     width: 70%;
+  }
+  .signupbtn {
+    margin-top: 6rem;
+   
   }
 }
