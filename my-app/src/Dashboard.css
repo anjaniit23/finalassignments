@@ -7,6 +7,13 @@ a {
   font-size: 2.5rem;
   text-decoration: none;
 }
+/* .cardBody{
+
+  align-items: center;
+  border: 10px solid white;
+  height: auto;
+  width:100vw;
+} */
 .linklogout {
   float: right !important;
   color: white;
@@ -27,6 +34,7 @@ a {
   height: 3rem;
   border-radius: 10rem;
 }
+
 .navbar {
   height: 6rem;
   display: flexbox;
@@ -82,39 +90,64 @@ a {
 }
 .inputbox,
 .inputbox:active {
-  border-radius: 2rem;
+  border-radius: 1rem;
   height: 8rem;
-  width: 50rem;
-  padding: 0;
+  min-width: 49rem;
+  min-height: 12rem;
+  max-width:49rem;
+  max-height: 12rem;
+  padding: 1rem 1rem;
   margin: 0;
 }
 .btn {
-  margin-top: 2.5rem;
+  margin-top: 0rem;
   width: 10rem;
   height: 3rem;
-  border-radius: 2rem;
-  background-color: rgb(46, 49, 46);
+  border-radius: 1.2rem;
+  background-color: rgb(42, 41, 41);
   color: aliceblue;
   cursor: pointer;
   border: 2px solid white;
+}
+.btnSubmit{
+  margin-top: 0rem;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 1.2rem;
+  background-color: rgb(42, 41, 41);
+  color: aliceblue;
+  cursor: pointer;
+  border: 1px solid rgb(97, 96, 96);
+}
+.btn:hover,.btnSubmit:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  background-color: rgba(34, 34, 34, 0.992);
+
 }
 .signupbtn {
   margin-top: 4rem;
   width: 10rem;
   height: 3rem;
-  border-radius: 2rem;
-  background-color: rgb(46, 49, 46);
+  border-radius: 1.2rem;
+  background-color: rgb(32, 33, 32);
   color: aliceblue;
   cursor: pointer;
-  border: 2px solid white;
+  border: 1px solid white;
+}
+.signupbtn:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  background-color: rgb(46, 45, 45);
 }
 .post {
+  float: left;
   color: white;
   margin-bottom: 2%;
   border-top-left-radius: 4rem;
   border-bottom-right-radius: 4rem;
-  width: 30%;
-  margin: 5% auto;
+  width: 50rem;
+  margin: 1% 8%;
   height: fit-content;
   border: 8px solid rgb(10, 9, 9);
   box-shadow: 0px -5px 10px rgb(12, 12, 12), 0px 10px 10px rgb(12, 12, 12),
@@ -140,13 +173,19 @@ a {
   text-align: left;
   font-family: Book Antiqua;
 }
+
 .postcontent {
+  word-wrap: break-word;
   margin: 0;
   font-family: Book Antiqua;
   padding-left: 5%;
   text-align: left;
   font-size: 1.8rem;
+  text-align: justify;
+  width: 45rem ;
+ 
 }
+
 .likes {
   text-align: left;
   width: 100%;
@@ -173,7 +212,18 @@ delete:hover {
   html {
     font-size: 6px;
   }
+  .inputbox ,.inputbox:active {
 
+    min-width: 24rem;
+    min-height: 10rem;
+    max-width:24rem;
+    max-height: 10rem;
+    border-radius: 1.5rem;
+
+  }
+  .postcontent {
+    width: 25rem
+  }
   .headingtext {
     width: 100%;
     height: 20%;
@@ -190,6 +240,7 @@ delete:hover {
   }
   .post {
     width: 70%;
+    margin-left: 10%;
   }
   .upper,
   .postcontent {
@@ -201,5 +252,26 @@ delete:hover {
   .signupbtn {
     margin-top: 6rem;
    
+  }
+  .btn{
+    margin-top: 2rem;
+  }
+  .btnSubmit{
+    z-index: 3;
+    margin-top: -6rem;
+    
+  }
+  .linklogout {
+    font-size: 1.8rem;
+
+  }
+}
+@keyframes zoom{
+  0%{
+    opacity: 0;
+    
+  }
+  100%{
+    opacity: 1;
   }
 }

@@ -62,10 +62,10 @@
 }
 .signup input,
 .signin input {
+  padding-left: 1rem;
   width: 30rem;
   height: 3rem;
-  border-bottom-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  border-radius: 0.5rem;
 }
 .signin {
   box-shadow: 3px 3px 10px #0a18ce, 3px 3px 10px #18f875, 0 0 10px #06ce8b;
@@ -74,7 +74,7 @@
   border-top-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
   width: 50rem;
-  height: 29rem;
+  height: 30rem;
   margin: 0 auto;
   text-align: center;
   background-image: linear-gradient(
@@ -108,7 +108,9 @@
   font-size: 2rem;
   font-family: Georgia;
 }
-
+.signup input:focus,.signin input:focus{
+  outline: none;
+}
 .alert {
   width: 100;
   height: 20%;
@@ -129,8 +131,10 @@
   .signin input {
     width: 70%;
     height: 3rem;
-    border-bottom-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    border-radius: 0.5rem;
+  }
+  .signup input:focus,.signin input:focus{
+    outline: none;
   }
   .signup {
     width: 30rem;

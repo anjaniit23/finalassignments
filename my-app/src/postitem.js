@@ -7,13 +7,15 @@ import del from "./del2.png";
 
 class PostItem extends Component {
 
-    onDelete(id) {
-        console.log("in delete section");
+    onDelete(id,e) {
+        e.preventDefault();
+        console.log("in delete section",e);
         this.props.deletePost(id);
     }
 
-    onLike(id) {
-
+    onLike(id,e) {
+        e.preventDefault();
+        console.log("in like section",e);
         this.props.addLike(id);
 
 
@@ -30,7 +32,7 @@ class PostItem extends Component {
                         </p>
                         {post.user === auth.user.id ? (<button style={{ width: '25px', height: '25px', backgroundColor: 'black(34,45,0.6)', margin: "2% 4% 0 0" }} type="button" onClick={this.onDelete.bind(this, post._id)} className="delete" ><img width="100%" height="100%" src={del} alt="delete" /></button>) : null}
                     </div> <br />
-                    <p style={{ padding: '0 5%' }} className="postcontent">{post.text}</p> <br />
+                    <div style={{ padding: '0 5%' }} className="postcontent"><p>{post.text}</p></div> <br />
                     <div className="likes">
                         <button type="button" style={{ width: '30px', height: '25px', backgroundColor: 'black(34,45,0.6)' }} onClick={this.onLike.bind(this, post._id)} ><img width="100%" height="100%" src={like} alt="like" /></button>
 

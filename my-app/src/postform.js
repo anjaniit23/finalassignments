@@ -29,7 +29,7 @@ class Postform extends Component {
    }
    onSubmit = (e) => {
       e.preventDefault();
-      console.log(this.props);
+      console.log("E",e);
       const { user } = this.props.auth;
       console.log("yeah,inside the onsumbit");
       const newPost = {
@@ -49,9 +49,10 @@ class Postform extends Component {
                <form onSubmit={this.onSubmit.bind(this)}>
                   <ul>
                      <li className="headingtext">Enter Your Post</li>
-                     <li><input name="text" className="inputbox" type="textbox" value={this.state.text} onChange={this.onChange.bind(this)} /></li>
+                     {/* <li><input name="text" className="inputbox" type="textbox" value={this.state.text} onChange={this.onChange.bind(this)} /></li> */}
+                     <li><textarea name="text"  className="inputbox" value={this.state.text} onChange={this.onChange.bind(this)}>Enter text here...</textarea></li>
                      <li style={{ width: '100%', justifyContent: 'centre' }} className="warntext2">{this.state.errors.text}</li>
-                     <li><button className="btn" type="submit" >Submit</button><br /></li>
+                     <li><button className="btnSubmit" type="submit" >Submit</button><br /></li>
 
                   </ul>
                </form>

@@ -10,7 +10,6 @@ class Posts extends Component {
 
   componentDidMount(){
     this.props.getPosts();
-  
   }
 render(){
    
@@ -24,8 +23,12 @@ render(){
      }
       return(
           <div>
+            
             <Postform/>
+            <div className='cardBody'>
             {postContent} 
+            </div>
+           
           </div>
 
       );

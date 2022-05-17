@@ -28,7 +28,7 @@ router.get('/:id',(req,res)=>{
 })
 //for deleting the post -private
 router.delete('/:id',passport.authenticate('jwt',{session:false}),(req,res)=>{
- profile.findOne({user:req.user.id})
+ profile.findOne({user:req.params.id})
         .then(profile=>{
             post.findById(req.params.id)
                 .then(post=>{
@@ -46,7 +46,7 @@ router.delete('/:id',passport.authenticate('jwt',{session:false}),(req,res)=>{
 //post req for like
 
 router.post('/like/:id',passport.authenticate('jwt',{session:false}),(req,res)=>{
-    profile.findOne({user:req.user.id})
+    profile.findOne({user:req.params.id})
            .then(profile=>{
                post.findById(req.params.id)
                    .then(post=>{
